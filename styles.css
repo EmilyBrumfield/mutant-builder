@@ -1,0 +1,45 @@
+.attribute {
+    width: 600px;
+    height: 400px;
+}
+
+.attribute__table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 600px;
+}
+
+.attribute__cell {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+.attribute__cell_style_heavy {
+    font-weight: bold;
+}
+
+.cost {
+    width: 600px;
+    height: 400px;
+}
+
+.cost__table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 600px;
+}
+
+.cost__cell {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+.cost__cell_style_heavy {
+    font-weight: bold;
+}

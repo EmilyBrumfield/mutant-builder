@@ -9,13 +9,65 @@
 </head>
 
 <body>
-    <!--<a onClick="getHero(true);"><div class="make_button"><h1 style="text-align:center">Create Superhero</h1></div></a> -->
-        
-    <h1>Might</h1>
-    <input type="number" value="0" id="might" onchange='attribute("might")'>
 
-    <p>Might Cost</p>
-    <p id="might-cost"></p>
+    <div class="attribute">
+        <table class="attribute-table">
+            <tr>
+                <td class="attribute__cell attribute__cell_style_heavy">Might</td>
+                <td class="attribute__cell attribute__cell_style_heavy">Finesse</td>
+                <td class="attribute__cell attribute__cell_style_heavy">Mind</td>
+                <td class="attribute__cell attribute__cell_style_heavy">Soul</td>           
+            </tr>
+            <tr>
+                <td id="might" class="attribute__cell">0</td>
+                <td id="finesse" class="attribute__cell">0</td>
+                <td id="mind" class="attribute__cell">0</td>
+                <td id="soul" class="attribute__cell">0</td>
+            </tr>
+            <tr>
+                <td class="attribute__cell">
+                    <button onclick='attribute("might", 5)'>5</button>
+                    <button onclick='attribute("might", 1)'>+</button>
+                    <button onclick='attribute("might", -1)'>-</button>
+                    <button onclick='attribute("might", -5)'>-5</button>
+                </td>
+                
+                <td class="attribute__cell">
+                    <button onclick='attribute("finesse", 5)'>5</button>
+                    <button onclick='attribute("finesse", 1)'>+</button>
+                    <button onclick='attribute("finesse", -1)'>-</button>
+                    <button onclick='attribute("finesse", -5)'>-5</button>
+                </td>
+                
+                <td class="attribute__cell">
+                    <button onclick='attribute("mind", 5)'>5</button>
+                    <button onclick='attribute("mind", 1)'>+</button>
+                    <button onclick='attribute("mind", -1)'>-</button>
+                    <button onclick='attribute("mind", -5)'>-5</button>
+                </td>
+                
+                <td class="attribute__cell">
+                    <button onclick='attribute("soul", 5)'>5</button>
+                    <button onclick='attribute("soul", 1)'>+</button>
+                    <button onclick='attribute("soul", -1)'>-</button>
+                    <button onclick='attribute("soul", -5)'>-5</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+ <div class="cost">
+        <table class="cost-table">
+            <tr>
+                <td class="cost__cell">Attributes</td>
+                           
+            </tr>
+            <tr>
+                <td id="attribute-cost" class="cost__cell">0</td>
+            </tr>
+            
+        </table>
+    </div>
 
 
 </body>
