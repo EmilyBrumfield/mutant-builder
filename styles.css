@@ -1,18 +1,18 @@
 .attribute {
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 175px;
 }
 
 .attribute__table {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 600px;
+    width: 800px;
 }
 
 .attribute__cell {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 150px;
+    width: 200px;
     height: 50px;
     text-align: center;
 }
@@ -41,5 +41,28 @@
 }
 
 .cost__cell_style_heavy {
+    font-weight: bold;
+}
+
+.skill {
+    width: 800px;
+    height: 400px;
+}
+
+.skill__table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 800px;
+}
+
+.skill__cell {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.skill__cell_style_heavy {
     font-weight: bold;
 }
