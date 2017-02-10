@@ -1,5 +1,6 @@
 //Character creation assistant for my houseruled version of a supers role-playing game (M&M 3E)
 //Commenting extensively and using clear variable names because I don't like reading under-commented code with unnecessarily abbreviated variable names
+//Currently a glorified spreadsheet, but will eventually have more advanced functionality
 
 
 //======================ADJUST AN ATTRIBUTE=============
