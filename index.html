@@ -57,6 +57,65 @@
 
     </div>
 
+    <div class="combat">
+        <table class="combat__table">
+            <tr>
+                <td class="combat__cell combat__cell_style_heavy">Attack</td>
+                <td class="combat__cell combat__cell_style_heavy">Defense</td>
+                <td class="combat__cell combat__cell_style_heavy">Damage</td>
+                <td class="combat__cell combat__cell_style_heavy">Toughness</td>
+                <td class="combat__cell combat__cell_style_heavy">Fortitude</td>
+                <td class="combat__cell combat__cell_style_heavy">Will</td>
+                
+                           
+            </tr>
+            <tr>
+                <td id="attack" class="combat__cell">0</td>
+                <td id="defense" class="combat__cell">0</td>
+                <td id="damage" class="combat__cell">0</td>
+                <td id="toughness" class="combat__cell">0</td>
+                <td id="fortitude" class="combat__cell">0</td>
+                <td id="will" class="combat__cell">0</td>
+                
+            </tr>
+            <tr>
+                <td class="combat__cell">
+                    <button onclick='combat("attack", 1)'>+</button>
+                    <button onclick='combat("attack", -1)'>-</button>
+                </td>
+
+                <td class="combat__cell">
+                    <button onclick='combat("defense", 1)'>+</button>
+                    <button onclick='combat("defense", -1)'>-</button>
+                </td>
+
+                <td class="combat__cell">
+                    <button onclick='combat("damage", 1)'>+</button>
+                    <button onclick='combat("damage", -1)'>-</button>
+                </td>
+
+                <td class="combat__cell">
+                    <button onclick='combat("toughness", 1)'>+</button>
+                    <button onclick='combat("toughness", -1)'>-</button>
+                </td>
+
+                <td class="combat__cell">
+                    <button onclick='combat("fortitude", 1)'>+</button>
+                    <button onclick='combat("fortitude", -1)'>-</button>
+                </td>
+
+                <td class="combat__cell">
+                    <button onclick='combat("will", 1)'>+</button>
+                    <button onclick='combat("will", -1)'>-</button>
+                </td>
+                
+            </tr>
+
+        </table>
+    </div>
+
+
+
     <div class="skill">
         <table class="skill__table">
             <tr>
@@ -200,15 +259,19 @@
 
 
  <div class="cost">
-        <table class="cost-table">
+        <table class="cost__table">
             <tr>
                 <td class="cost__cell">Attributes</td>
                 <td class="cost__cell">Skills</td>
+                <td class="cost__cell">Combat</td>
+                <td class="cost__cell">Total</td>
                            
             </tr>
             <tr>
                 <td id="attribute-cost" class="cost__cell">0</td>
                 <td id="skill-cost" class="cost__cell">0</td>
+                <td id="combat-cost" class="cost__cell">0</td>
+                <td id="total-cost" class="cost__cell">0</td>
             </tr>
             
         </table>

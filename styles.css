@@ -21,22 +21,46 @@
     font-weight: bold;
 }
 
+
+.combat {
+    width: 800px;
+    height: 150px;
+}
+
+.combat__table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 800px;
+}
+
+.combat__cell {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.combat__cell_style_heavy {
+    font-weight: bold;
+}
+
 .cost {
     width: 600px;
-    height: 400px;
+    height: 200px;
 }
 
 .cost__table {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 600px;
+    width: 800px;
+    height: 100px;
 }
 
 .cost__cell {
     border: 1px solid black;
     border-collapse: collapse;
     width: 150px;
-    height: 50px;
     text-align: center;
 }
 
@@ -46,19 +70,20 @@
 
 .skill {
     width: 800px;
-    height: 400px;
+    height: 210px;
 }
 
 .skill__table {
     border: 1px solid black;
     border-collapse: collapse;
     width: 800px;
+    height: 200px;
 }
 
 .skill__cell {
     border: 1px solid black;
     border-collapse: collapse;
-    height: 30px;
+    
     text-align: center;
     font-size: 12px;
 }
