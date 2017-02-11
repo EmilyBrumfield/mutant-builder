@@ -126,62 +126,79 @@ function updateCost() { //tracks costs of ranks
 
   document.getElementById("skill-cost").innerHTML = skillCost * skillRanks; // calculates skill cost, updates display; can be a fraction
 
-  //Power costs are a little different. There's no constant multiplier because they can have different costs per rank.
-  //Instead, the costs are a multiplier.
+  //Power costs are a little different. There's no constant multiplier because the input categories just track points directly.
   
   var powerCost = 0; //powerCost is the total cost of the powers; starts at zero
   
-  powerCost += (parseInt(document.getElementById("armor").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("blast").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("blending").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("clinging").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("corrosion").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("datalink").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("dazzle").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("density").innerHTML, 10)) * 3;
-  powerCost += (parseInt(document.getElementById("disintegration").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("elementControl").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("energyControl").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("energyField").innerHTML, 10)) * 4;
-  powerCost += (parseInt(document.getElementById("esp").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("fatigue").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("flight").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("growth").innerHTML, 10)) * 3; 
-  powerCost += (parseInt(document.getElementById("healing").innerHTML, 10)) * 3;
-  powerCost += (parseInt(document.getElementById("illusion").innerHTML, 10)) * 2; 
-  powerCost += (parseInt(document.getElementById("immovability").innerHTML, 10)) * 1; 
-  powerCost += (parseInt(document.getElementById("incorporeal").innerHTML, 10)) * 2; 
-  powerCost += (parseInt(document.getElementById("invisibility").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("leaping").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("luck").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("mindBlast").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("mindControl").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("morph").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("neutralize").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("obscure").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("paralysis").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("plantControl").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("regeneration").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("shrinking").innerHTML, 10)) * 3;
-  powerCost += (parseInt(document.getElementById("slick").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("slow").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("snare").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("speed").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("swimming").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("telekinesis").innerHTML, 10)) * 1;
-  powerCost += (parseInt(document.getElementById("telepathy").innerHTML, 10)) * 2;
-  powerCost += (parseInt(document.getElementById("teleport").innerHTML, 10)) * 3;
-  powerCost += (parseInt(document.getElementById("weatherControl").innerHTML, 10)) * 2;
-
+  powerCost += parseInt(document.getElementById("offensive").innerHTML, 10);
+  powerCost += parseInt(document.getElementById("defensive").innerHTML, 10);
+  powerCost += parseInt(document.getElementById("mobility").innerHTML, 10);
+  powerCost += parseInt(document.getElementById("other").innerHTML, 10);
   
-  
-
   document.getElementById("power-cost").innerHTML = powerCost; // updates power cost display; can be a fraction
 
   var totalCost = 0; //totalCost is total cost of all the traits; starts at zero
   totalCost += parseInt(document.getElementById("attribute-cost").innerHTML, 10); //adds Attribute's cost to totalCost
   totalCost += parseInt(document.getElementById("combat-cost").innerHTML, 10); //see above
   totalCost += parseInt(document.getElementById("skill-cost").innerHTML, 10); //see above
+  totalCost += parseInt(document.getElementById("power-cost").innerHTML, 10); //see above
   document.getElementById("total-cost").innerHTML = totalCost; // calculates total cost, updates display; fractions are rounded down
+
+}
+
+//======================QUICK SETUP=============
+function quickSetup(powerLevel) {  
+    //powerLevel should be the number to set the combat stats to
+  
+    document.getElementById("attack").innerHTML = powerLevel;
+    document.getElementById("defense").innerHTML = powerLevel;
+    document.getElementById("damage").innerHTML = powerLevel;
+    document.getElementById("toughness").innerHTML = powerLevel;
+    document.getElementById("fortitude").innerHTML = powerLevel;
+    document.getElementById("will").innerHTML = powerLevel;
+
+  
+  updateCost(); //calls the updateCost function to adjust the point costs
+
+}
+
+//======================CLEAR ALL=============
+function clearAll() {  
+    //powerLevel should be the number to set the combat stats to
+  
+    document.getElementById("might").innerHTML = 0;
+    document.getElementById("finesse").innerHTML = 0;
+    document.getElementById("mind").innerHTML = 0;
+    document.getElementById("soul").innerHTML =
+    document.getElementById("attack").innerHTML = 0;
+    document.getElementById("defense").innerHTML = 0;
+    document.getElementById("damage").innerHTML = 0;
+    document.getElementById("toughness").innerHTML = 0;
+    document.getElementById("fortitude").innerHTML = 0;
+    document.getElementById("will").innerHTML = 0;
+    document.getElementById("acrobatics").innerHTML = 0;
+    document.getElementById("athletics").innerHTML = 0;
+    document.getElementById("deception").innerHTML = 0;
+    document.getElementById("insight").innerHTML = 0;
+    document.getElementById("intimidation").innerHTML = 0;
+    document.getElementById("investigation").innerHTML = 0;
+    document.getElementById("perception").innerHTML = 0;
+    document.getElementById("persuasion").innerHTML = 0;
+    document.getElementById("sleight").innerHTML = 0;
+    document.getElementById("stealth").innerHTML = 0;
+    document.getElementById("technology").innerHTML = 0;
+    document.getElementById("treatment").innerHTML = 0;
+    document.getElementById("vehicles").innerHTML = 0;
+    document.getElementById("custom1").innerHTML = 0;
+    document.getElementById("custom2").innerHTML = 0;
+    document.getElementById("custom3").innerHTML = 0;
+    document.getElementById("offensive").innerHTML = 0;
+    document.getElementById("defensive").innerHTML = 0;
+    document.getElementById("mobility").innerHTML = 0;
+    document.getElementById("other").innerHTML = 0;
+
+
+  
+  updateCost(); //calls the updateCost function to adjust the point costs
 
 }

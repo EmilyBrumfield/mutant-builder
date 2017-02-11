@@ -1,5 +1,14 @@
+html {
+    background-color: #ffffcc;
+}
+
+table {
+    background-color: white;
+}
+
 .attribute {
-    width: 100%;
+    width: 90%;
+    margin: 1% 5% 0% 5%;
 }
 
 .attribute__table {
@@ -24,7 +33,8 @@
 
 
 .combat {
-    width: 100%;
+    width: 90%;
+    margin: 1% 5% 0% 5%;
 }
 
 .combat__table {
@@ -48,8 +58,8 @@
 }
 
 .cost {
-    width: 100%;
-    height: 200px;
+    width: 90%;
+    margin: 1% 5% 0% 5%;
 
 }
 
@@ -61,7 +71,7 @@
 }
 
 .cost__cell {
-    height: 1.5em;
+    height: 2em;
     width: 200px;
     border: 1px solid black;
     border-collapse: collapse;
@@ -69,12 +79,13 @@
 }
 
 .cost__cell_style_heavy {
-    background-color: mediumpurple;
+    background-color: #c080c0;
     font-weight: bold;
 }
 
 .power {
-    width: 100%;
+    width: 90%;
+    margin: 1% 5% 0% 5%;
 }
 
 .power__table {
@@ -98,9 +109,34 @@
     font-weight: bold;
 }
 
+.preset {
+    
+    width: 90%;
+    margin: 1% 5% 0% 5%;
+}
+
+.preset__table {
+    background-color: #ffffcc;
+    width: 100%;
+    font-size: 1em;
+}
+
+.preset__cell {
+    height: 3em;
+    width: 200px;
+    
+    text-align: center;
+}
+
+.preset__button {
+    width: 90%;
+    height: 3em;
+}
+
 
 .skill {
-    width: 100%;
+    width: 90%;
+    margin: 1% 5% 0% 5%;
 }
 
 .skill__table {

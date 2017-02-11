@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+7<html>
 
 <head>
     <title>Mutant Builder</title>
@@ -259,83 +259,42 @@
 <div class="power">
         <table class="power__table">
             <tr>
-                <td class="power__cell power__cell_style_heavy">Armor</td>
-                <td class="power__cell power__cell_style_heavy">Blast</td>
-                <td class="power__cell power__cell_style_heavy">Blending</td>
-                <td class="power__cell power__cell_style_heavy">Clinging</td>
-                <td class="power__cell power__cell_style_heavy">Corrosion</td>
-                <td class="power__cell power__cell_style_heavy">Datalink</td>
-                <td class="power__cell power__cell_style_heavy">Dazzle</td>
-                <td class="power__cell power__cell_style_heavy">Density</td>
-                <td class="power__cell power__cell_style_heavy">Disintegrate</td>
-                <td class="power__cell power__cell_style_heavy">Element Control</td>
+                <td class="power__cell power__cell_style_heavy">Offensive Powers</td>
+                <td class="power__cell power__cell_style_heavy">Defensive Powers</td>
+                <td class="power__cell power__cell_style_heavy">Mobility Powers</td>
+                <td class="power__cell power__cell_style_heavy">Other Powers</td>
                 
                            
             </tr>
             <tr>
-                <td id="attack" class="power__cell">0</td>
-                <td id="defense" class="power__cell">0</td>
-                <td id="damage" class="power__cell">0</td>
-                <td id="toughness" class="power__cell">0</td>
-                <td id="fortitude" class="power__cell">0</td>
-                <td id="will" class="power__cell">0</td>
-                <td id="damage" class="power__cell">0</td>
-                <td id="toughness" class="power__cell">0</td>
-                <td id="fortitude" class="power__cell">0</td>
-                <td id="will" class="power__cell">0</td>
+                <td id="offensive" class="power__cell">0</td>
+                <td id="defensive" class="power__cell">0</td>
+                <td id="mobility" class="power__cell">0</td>
+                <td id="other" class="power__cell">0</td>
+                
                 
             </tr>
             <tr>
                 <td class="power__cell">
-                    <button onclick='power("attack", 1)'>+</button>
-                    <button onclick='power("attack", -1)'>-</button>
+                    <button onclick='power("offensive", 1)'>+</button>
+                    <button onclick='power("offensive", -1)'>-</button>
                 </td>
 
                 <td class="power__cell">
-                    <button onclick='power("defense", 1)'>+</button>
-                    <button onclick='power("defense", -1)'>-</button>
+                    <button onclick='power("defensive", 1)'>+</button>
+                    <button onclick='power("defensive", -1)'>-</button>
                 </td>
 
                 <td class="power__cell">
-                    <button onclick='power("damage", 1)'>+</button>
-                    <button onclick='power("damage", -1)'>-</button>
+                    <button onclick='power("mobility", 1)'>+</button>
+                    <button onclick='power("mobility", -1)'>-</button>
                 </td>
 
                 <td class="power__cell">
-                    <button onclick='power("toughness", 1)'>+</button>
-                    <button onclick='power("toughness", -1)'>-</button>
+                    <button onclick='power("other", 1)'>+</button>
+                    <button onclick='power("other", -1)'>-</button>
                 </td>
 
-                <td class="power__cell">
-                    <button onclick='power("fortitude", 1)'>+</button>
-                    <button onclick='power("fortitude", -1)'>-</button>
-                </td>
-
-                <td class="power__cell">
-                    <button onclick='power("will", 1)'>+</button>
-                    <button onclick='power("will", -1)'>-</button>
-                </td>
-
-                <td class="power__cell">
-                    <button onclick='power("will", 1)'>+</button>
-                    <button onclick='power("will", -1)'>-</button>
-                </td>
-
-                <td class="power__cell">
-                    <button onclick='power("will", 1)'>+</button>
-                    <button onclick='power("will", -1)'>-</button>
-                </td>
-
-                <td class="power__cell">
-                    <button onclick='power("will", 1)'>+</button>
-                    <button onclick='power("will", -1)'>-</button>
-                </td>
-
-                <td class="power__cell">
-                    <button onclick='power("will", 1)'>+</button>
-                    <button onclick='power("will", -1)'>-</button>
-                </td>
-                
             </tr>
 
         </table>
@@ -349,6 +308,7 @@
                 <td class="cost__cell cost__cell_style_heavy">Attributes</td>
                 <td class="cost__cell cost__cell_style_heavy">Skills</td>
                 <td class="cost__cell cost__cell_style_heavy">Combat</td>
+                <td class="cost__cell cost__cell_style_heavy">Powers</td>
                 <td class="cost__cell cost__cell_style_heavy">Total</td>
                            
             </tr>
@@ -356,12 +316,23 @@
                 <td id="attribute-cost" class="cost__cell">0</td>
                 <td id="skill-cost" class="cost__cell">0</td>
                 <td id="combat-cost" class="cost__cell">0</td>
+                <td id="power-cost" class="cost__cell">0</td>
                 <td id="total-cost" class="cost__cell">0</td>
             </tr>
             
         </table>
     </div>
 
+    <div class="preset">
+        <table class="preset__table">
+            <tr>
+                <td class="preset__cell"><button class="preset__button" onclick="quickSetup(10)">Power 10</button></td>
+                <td class="preset__cell"><button class="preset__button" onclick="clearAll()">Clear</button></td>
+                           
+            </tr>
+            
+        </table>
+    </div>
 
 </body>
 
