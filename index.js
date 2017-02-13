@@ -101,7 +101,7 @@ function updateCost() { //tracks costs of ranks
   combatRanks -= parseInt(document.getElementById("finesse").innerHTML, 10); //Discount to Defense for Finesse
   combatRanks -= parseInt(document.getElementById("soul").innerHTML, 10); //Discount to Will for Soul
   
-  document.getElementById("combat-cost").innerHTML = combatCost * combatRanks; // calculates skill cost, updates display; can be a fraction
+  document.getElementById("combat-cost").innerHTML = combatCost * combatRanks; // calculates combat cost, updates display; can be a fraction
   
 
   var skillCost = 0.5; //constant; character point cost per skill rank
@@ -133,7 +133,7 @@ function updateCost() { //tracks costs of ranks
   powerCost += parseInt(document.getElementById("offensive").innerHTML, 10);
   powerCost += parseInt(document.getElementById("defensive").innerHTML, 10);
   powerCost += parseInt(document.getElementById("mobility").innerHTML, 10);
-  powerCost += parseInt(document.getElementById("other").innerHTML, 10);
+  powerCost += parseInt(document.getElementById("utility").innerHTML, 10);
   
   document.getElementById("power-cost").innerHTML = powerCost; // updates power cost display; can be a fraction
 
@@ -144,11 +144,14 @@ function updateCost() { //tracks costs of ranks
   totalCost += parseInt(document.getElementById("power-cost").innerHTML, 10); //see above
   document.getElementById("total-cost").innerHTML = totalCost; // calculates total cost, updates display; fractions are rounded down
 
+
+
+
 }
 
 //======================QUICK SETUP=============
 function quickSetup(powerLevel) {  
-    //powerLevel should be the number to set the combat stats to
+    //powerLevel should be the number to set the combat stats to; it'll set Might and Finesse to half that amount
   
     document.getElementById("attack").innerHTML = powerLevel;
     document.getElementById("defense").innerHTML = powerLevel;
@@ -156,6 +159,8 @@ function quickSetup(powerLevel) {
     document.getElementById("toughness").innerHTML = powerLevel;
     document.getElementById("fortitude").innerHTML = powerLevel;
     document.getElementById("will").innerHTML = powerLevel;
+    document.getElementById("might").innerHTML = parseInt(powerLevel/2, 10);
+    document.getElementById("finesse").innerHTML = parseInt(powerLevel/2, 10);
 
   
   updateCost(); //calls the updateCost function to adjust the point costs
@@ -195,10 +200,116 @@ function clearAll() {
     document.getElementById("offensive").innerHTML = 0;
     document.getElementById("defensive").innerHTML = 0;
     document.getElementById("mobility").innerHTML = 0;
-    document.getElementById("other").innerHTML = 0;
-
+    document.getElementById("utility").innerHTML = 0;
 
   
   updateCost(); //calls the updateCost function to adjust the point costs
+
+}
+
+//======================SHOW CHARACTER=============
+//formats character stats into copy/pastable text, displays as an alert
+//Uses alert rather than displaying on page to save space
+//Since it's rarely used, the mild annoyance of an alert is probably not a big problem
+
+function showCharacter() {
+  
+
+  //==============GET A STAT VALUE=========
+  function getStat(statId) {  //gets and returns a stat's value as an integer
+    return parseInt((document.getElementById(statId).innerHTML), 10);
+
+  }
+
+  //==============MAKE SURE A SKILL IS NOT ZERO========
+  function checkSkill(statId, skillName) { //checks a skill to see if it's non-zero; returns formatted string if it is, otherwise returns a blank string
+    //statId is the element id for the skill; skillName should be the plain English name of the skill
+      if ( getStat(statId) != "0" ) {
+          return skillName + " " + getStat(statId) + ", ";
+      }
+      else {
+          return "";
+      };
+
+  }
+
+  //==============DISPLAY ALL SKILLS=======
+  function skillDisplay() {
+      //creates a string to add to characterAlert, below
+      //adds a double line break, displays the skills on a line; only displays skills with non-zero values
+
+      var skillAlert = ""; //stores skill line string; if there are any skills, adds a double line break and displays them
+
+      skillAlert += "\n\n";
+      skillAlert += checkSkill("acrobatics", "Acrobatics");
+      skillAlert += checkSkill("athletics", "Athletics");
+      skillAlert += checkSkill("deception", "Deception");
+      skillAlert += checkSkill("insight", "Insight");
+      skillAlert += checkSkill("intimidation", "Intimidation");
+      skillAlert += checkSkill("investigation", "Investigation");
+      skillAlert += checkSkill("perception", "Perception");
+      skillAlert += checkSkill("persuasion", "Persuasion");
+      skillAlert += checkSkill("sleight", "Sleight of Hand");
+      skillAlert += checkSkill("stealth", "Stealth");
+      skillAlert += checkSkill("technology", "Technology");
+      skillAlert += checkSkill("treatment", "Treatment");
+      skillAlert += checkSkill("vehicles", "Vehicles");
+      skillAlert += checkSkill("custom1", "(Custom 1)");
+      skillAlert += checkSkill("custom2", "(Custom 2)");
+      skillAlert += checkSkill("custom3", "(Custom 3)");
+      
+
+      if (skillAlert == "\n\n") { //prevents line break if there's nothing in skillAlert at all
+        skillAlert = "";
+      }
+      else {
+        skillAlert = skillAlert.slice(0, skillAlert.length -2) //otherwise, cuts off the last comma in skillAlert
+      };
+
+      return skillAlert;
+
+    }
+
+
+  var characterAlert = ""; //stores character sheetstring to be displayed in an alert
+
+  characterAlert += "(Cut and paste the following into an empty document)";
+  characterAlert += "\n\n";
+
+  //displays the attributes on a line
+  characterAlert += "Might " + getStat("might");
+  characterAlert += ", Finesse " +  getStat("finesse");
+  characterAlert += ", Mind " +  getStat("mind");
+  characterAlert += ", Soul " +  getStat("soul");
+
+  //adds a double line break, displays the combat traits on a line
+  characterAlert += "\n\n";
+  characterAlert += "Attack " + getStat("attack");
+  characterAlert += ", Defense " +  getStat("defense");
+  characterAlert += ", Damage " +  getStat("damage");
+  characterAlert += ", Toughness " +  getStat("toughness");
+  characterAlert += ", Fortitude " +  getStat("fortitude");
+  characterAlert += ", Will " +  getStat("will");
+
+  //if there are any skills with ranks, adds a double line break and displays the skills on a line
+  characterAlert += skillDisplay();
+
+  //adds a double line break, displays the power categories on a line
+  characterAlert += "\n\n";
+  characterAlert += "Offensive Powers " + getStat("offensive");
+  characterAlert += ", Defensive Powers " +  getStat("defensive");
+  characterAlert += ", Mobility Powers " +  getStat("mobility");
+  characterAlert += ", Utility Powers " +  getStat("utility");
+
+    //adds a double line break, displays the fine costs on a line with "COSTS" as a header
+  characterAlert += "\n\nCOSTS\n";
+  characterAlert += "Attributes " + getStat("attribute-cost");
+  characterAlert += ", Combat Traits " +  getStat("combat-cost");
+  characterAlert += ", Skills " +  getStat("skill-cost");
+  characterAlert += ", Powers " +  getStat("power-cost");
+  characterAlert += ", Total " +  getStat("total-cost");
+  
+  alert(characterAlert);
+
 
 }
