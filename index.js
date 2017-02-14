@@ -10,7 +10,7 @@ as I add new features*/
 add too much bloat. Instead, I might make some sister applications that use exported data from this one or otherwise complement it.
 Due to that decision, I don't really need to separate the functions for future differentiation.*/
 
-//======================ADJUST AN ATTRIBUTE=============
+//======================ADJUST A TRAIT=============
 function stat(statId, amount) {  
     /*statId should be the HTML element id for one of the table cells
       amount should be the amount to increment the trait by*/
