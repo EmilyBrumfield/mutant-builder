@@ -2,23 +2,17 @@ html {
     background-color: #ffffcc;
 }
 
-table {
-    background-color: white;
+.stat__button {
+    width: 90%;
+    height: 3em;
 }
 
-.attribute {
+.stat__div {
     width: 90%;
     margin: 1% 5% 0% 5%;
 }
 
-.attribute__table {
-    width: 100%;
-    border: 1px solid black;
-    border-collapse: collapse;
-    font-size: 1em;
-}
-
-.attribute__cell {
+.stat__cell {
     height: 1.5em;
     width: 200px;
     border: 1px solid black;
@@ -26,51 +20,22 @@ table {
     text-align: center;
 }
 
-.attribute__cell_style_heavy {
+.stat__cell_style_attribute {
     background-color: #4040ff;
     font-weight: bold;
 }
 
-
-.combat {
-    width: 90%;
-    margin: 1% 5% 0% 5%;
-}
-
-.combat__table {
-    width: 100%;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-.combat__cell {
-    height: 1.5em;
-    width: 200px;
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    font-size: 1em;
-}
-
-.combat__cell_style_heavy {
+.stat__cell_style_combat {
     background-color: #8080ff;
     font-weight: bold;
 }
 
-.cost {
-    width: 90%;
-    margin: 1% 5% 0% 5%;
-
+.stat__cell_style_cost {
+    background-color: #c080c0;
+    font-weight: bold;
 }
 
-.cost__table {
-    width: 100%;
-    border: 1px solid black;
-    border-collapse: collapse;
-    
-}
-
-.cost__cell {
+.stat__cell_style_cost-body {
     height: 2em;
     width: 200px;
     border: 1px solid black;
@@ -78,85 +43,33 @@ table {
     text-align: center;
 }
 
-.cost__cell_style_heavy {
-    background-color: #c080c0;
-    font-weight: bold;
-}
-
-.power {
-    width: 90%;
-    margin: 1% 5% 0% 5%;
-}
-
-.power__table {
-    width: 100%;
-    border: 1px solid black;
-    border-collapse: collapse;
-    
-}
-
-.power__cell {
-    height: 1.5em;
-    width: 600px;
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    font-size: 1em;
-}
-
-.power__cell_style_heavy {
+.stat__cell_style_power {
     background-color: #60ff60;    
     font-weight: bold;
 }
 
-.preset {
+.stat__cell_style_preset {
+    height: 3em;
+    width: 200px;
     
-    width: 90%;
-    margin: 1% 5% 0% 5%;
+    text-align: center;
 }
 
-.preset__table {
+.stat__cell_style_skill {
+    background-color: #c0c0ff;
+    font-weight: bold;
+}
+
+.stat__table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 1em;
+    background-color: white;
+}
+
+.stat__table_style_preset {
     background-color: #ffffcc;
     width: 100%;
     font-size: 1em;
-}
-
-.preset__cell {
-    height: 3em;
-    width: 200px;
-    
-    text-align: center;
-}
-
-.preset__button {
-    width: 90%;
-    height: 3em;
-}
-
-
-.skill {
-    width: 90%;
-    margin: 1% 5% 0% 5%;
-}
-
-.skill__table {
-    width: 100%;
-    height: 200px;
-    border: 1px solid black;
-    border-collapse: collapse;
-    
-}
-
-.skill__cell {
-    width: 200px;
-    height: 1.5em;
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    font-size: 1em;
-}
-
-.skill__cell_style_heavy {
-    background-color: #c0c0ff;
-    font-weight: bold;
 }

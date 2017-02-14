@@ -10,43 +10,43 @@
 
 <body>
 
-    <div class="attribute">
-        <table class="attribute__table">
+    <div class="stat__div">
+        <table class="stat__table">
             <tr>
-                <td class="attribute__cell attribute__cell_style_heavy">Might</td>
-                <td class="attribute__cell attribute__cell_style_heavy">Finesse</td>
-                <td class="attribute__cell attribute__cell_style_heavy">Mind</td>
-                <td class="attribute__cell attribute__cell_style_heavy">Soul</td>           
+                <td class="stat__cell stat__cell_style_attribute">Might</td>
+                <td class="stat__cell stat__cell_style_attribute">Finesse</td>
+                <td class="stat__cell stat__cell_style_attribute">Mind</td>
+                <td class="stat__cell stat__cell_style_attribute">Soul</td>           
             </tr>
             <tr>
-                <td id="might" class="attribute__cell">0</td>
-                <td id="finesse" class="attribute__cell">0</td>
-                <td id="mind" class="attribute__cell">0</td>
-                <td id="soul" class="attribute__cell">0</td>
+                <td id="might" class="stat__cell">0</td>
+                <td id="finesse" class="stat__cell">0</td>
+                <td id="mind" class="stat__cell">0</td>
+                <td id="soul" class="stat__cell">0</td>
             </tr>
             <tr>
-                <td class="attribute__cell">
+                <td class="stat__cell">
                     <button onclick='stat("might", 5)'>5</button>
                     <button onclick='stat("might", 1)'>+</button>
                     <button onclick='stat("might", -1)'>-</button>
                     <button onclick='stat("might", -5)'>-5</button>
                 </td>
                 
-                <td class="attribute__cell">
+                <td class="stat__cell">
                     <button onclick='stat("finesse", 5)'>5</button>
                     <button onclick='stat("finesse", 1)'>+</button>
                     <button onclick='stat("finesse", -1)'>-</button>
                     <button onclick='stat("finesse", -5)'>-5</button>
                 </td>
                 
-                <td class="attribute__cell">
+                <td class="stat__cell">
                     <button onclick='stat("mind", 5)'>5</button>
                     <button onclick='stat("mind", 1)'>+</button>
                     <button onclick='stat("mind", -1)'>-</button>
                     <button onclick='stat("mind", -5)'>-5</button>
                 </td>
                 
-                <td class="attribute__cell">
+                <td class="stat__cell">
                     <button onclick='stat("soul", 5)'>5</button>
                     <button onclick='stat("soul", 1)'>+</button>
                     <button onclick='stat("soul", -1)'>-</button>
@@ -57,54 +57,54 @@
 
     </div>
 
-    <div class="combat">
-        <table class="combat__table">
+    <div class="stat__div">
+        <table class="stat__table">
             <tr>
-                <td class="combat__cell combat__cell_style_heavy">Attack</td>
-                <td class="combat__cell combat__cell_style_heavy">Defense</td>
-                <td class="combat__cell combat__cell_style_heavy">Damage</td>
-                <td class="combat__cell combat__cell_style_heavy">Toughness</td>
-                <td class="combat__cell combat__cell_style_heavy">Fortitude</td>
-                <td class="combat__cell combat__cell_style_heavy">Will</td>
+                <td class="stat__cell stat__cell_style_combat">Attack</td>
+                <td class="stat__cell stat__cell_style_combat">Defense</td>
+                <td class="stat__cell stat__cell_style_combat">Damage</td>
+                <td class="stat__cell stat__cell_style_combat">Toughness</td>
+                <td class="stat__cell stat__cell_style_combat">Fortitude</td>
+                <td class="stat__cell stat__cell_style_combat">Will</td>
                 
                            
             </tr>
             <tr>
-                <td id="attack" class="combat__cell">0</td>
-                <td id="defense" class="combat__cell">0</td>
-                <td id="damage" class="combat__cell">0</td>
-                <td id="toughness" class="combat__cell">0</td>
-                <td id="fortitude" class="combat__cell">0</td>
-                <td id="will" class="combat__cell">0</td>
+                <td id="attack" class="stat__cell ">0</td>
+                <td id="defense" class="stat__cell ">0</td>
+                <td id="damage" class="stat__cell ">0</td>
+                <td id="toughness" class="stat__cell ">0</td>
+                <td id="fortitude" class="stat__cell ">0</td>
+                <td id="will" class="stat__cell ">0</td>
                 
             </tr>
             <tr>
-                <td class="combat__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("attack", 1)'>+</button>
                     <button onclick='stat("attack", -1)'>-</button>
                 </td>
 
-                <td class="combat__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("defense", 1)'>+</button>
                     <button onclick='stat("defense", -1)'>-</button>
                 </td>
 
-                <td class="combat__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("damage", 1)'>+</button>
                     <button onclick='stat("damage", -1)'>-</button>
                 </td>
 
-                <td class="combat__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("toughness", 1)'>+</button>
                     <button onclick='stat("toughness", -1)'>-</button>
                 </td>
 
-                <td class="combat__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("fortitude", 1)'>+</button>
                     <button onclick='stat("fortitude", -1)'>-</button>
                 </td>
 
-                <td class="combat__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("will", 1)'>+</button>
                     <button onclick='stat("will", -1)'>-</button>
                 </td>
@@ -116,69 +116,69 @@
 
 
 
-    <div class="skill">
-        <table class="skill__table">
+    <div class="stat__div">
+        <table class="stat__table">
             <tr>
-                <td class="skill__cell skill__cell_style_heavy">Acrobatics</td>
-                <td class="skill__cell skill__cell_style_heavy">Athletics</td>
-                <td class="skill__cell skill__cell_style_heavy">Deception</td>
-                <td class="skill__cell skill__cell_style_heavy">Insight</td>
-                <td class="skill__cell skill__cell_style_heavy">Intimidation</td>
-                <td class="skill__cell skill__cell_style_heavy">Investigation</td>
-                <td class="skill__cell skill__cell_style_heavy">Perception</td>
-                <td class="skill__cell skill__cell_style_heavy">Persuasion</td>
+                <td class="stat__cell stat__cell_style_skill">Acrobatics</td>
+                <td class="stat__cell stat__cell_style_skill">Athletics</td>
+                <td class="stat__cell stat__cell_style_skill">Deception</td>
+                <td class="stat__cell stat__cell_style_skill">Insight</td>
+                <td class="stat__cell  stat__cell_style_skill">Intimidation</td>
+                <td class="stat__cell  stat__cell_style_skill">Investigation</td>
+                <td class="stat__cell  stat__cell_style_skill">Perception</td>
+                <td class="stat__cell  stat__cell_style_skill">Persuasion</td>
                 
                            
             </tr>
             <tr>
-                <td id="acrobatics" class="skill__cell">0</td>
-                <td id="athletics" class="skill__cell">0</td>
-                <td id="deception" class="skill__cell">0</td>
-                <td id="insight" class="skill__cell">0</td>
-                <td id="intimidation" class="skill__cell">0</td>
-                <td id="investigation" class="skill__cell">0</td>
-                <td id="perception" class="skill__cell">0</td>
-                <td id="persuasion" class="skill__cell">0</td>
+                <td id="acrobatics" class="stat__cell ">0</td>
+                <td id="athletics" class="stat__cell ">0</td>
+                <td id="deception" class="stat__cell ">0</td>
+                <td id="insight" class="stat__cell ">0</td>
+                <td id="intimidation" class="stat__cell ">0</td>
+                <td id="investigation" class="stat__cell ">0</td>
+                <td id="perception" class="stat__cell ">0</td>
+                <td id="persuasion" class="stat__cell ">0</td>
                 
                 
             </tr>
             <tr>
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("acrobatics", 1)'>+</button>
                     <button onclick='stat("acrobatics", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("athletics", 1)'>+</button>
                     <button onclick='stat("athletics", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("deception", 1)'>+</button>
                     <button onclick='stat("deception", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("insight", 1)'>+</button>
                     <button onclick='stat("insight", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("intimidation", 1)'>+</button>
                     <button onclick='stat("intimidation", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("investigation", 1)'>+</button>
                     <button onclick='stat("investigation", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("perception", 1)'>+</button>
                     <button onclick='stat("perception", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("persuasion", 1)'>+</button>
                     <button onclick='stat("persuasion", -1)'>-</button>
                 </td>
@@ -187,66 +187,66 @@
             </tr>
 
             <tr>
-                <td class="skill__cell skill__cell_style_heavy">Sleight of Hand</td>
-                <td class="skill__cell skill__cell_style_heavy">Stealth</td>
-                <td class="skill__cell skill__cell_style_heavy">Technology</td>
-                <td class="skill__cell skill__cell_style_heavy">Treatment</td>
-                <td class="skill__cell skill__cell_style_heavy">Vehicles</td>
-                <td class="skill__cell skill__cell_style_heavy">Custom 1</td>
-                <td class="skill__cell skill__cell_style_heavy">Custom 2</td>
-                <td class="skill__cell skill__cell_style_heavy">Custom 3</td>
+                <td class="stat__cell  stat__cell_style_skill">Sleight of Hand</td>
+                <td class="stat__cell  stat__cell_style_skill">Stealth</td>
+                <td class="stat__cell  stat__cell_style_skill">Technology</td>
+                <td class="stat__cell  stat__cell_style_skill">Treatment</td>
+                <td class="stat__cell  stat__cell_style_skill">Vehicles</td>
+                <td class="stat__cell  stat__cell_style_skill">Custom 1</td>
+                <td class="stat__cell  stat__cell_style_skill">Custom 2</td>
+                <td class="stat__cell  stat__cell_style_skill">Custom 3</td>
                            
             </tr>
             <tr>
-                <td id="sleight" class="skill__cell">0</td>
-                <td id="stealth" class="skill__cell">0</td>
-                <td id="technology" class="skill__cell">0</td>
-                <td id="treatment" class="skill__cell">0</td>
-                <td id="vehicles" class="skill__cell">0</td>
-                <td id="custom1" class="skill__cell">0</td>
-                <td id="custom2" class="skill__cell">0</td>
-                <td id="custom3" class="skill__cell">0</td>
+                <td id="sleight" class="stat__cell ">0</td>
+                <td id="stealth" class="stat__cell ">0</td>
+                <td id="technology" class="stat__cell ">0</td>
+                <td id="treatment" class="stat__cell ">0</td>
+                <td id="vehicles" class="stat__cell ">0</td>
+                <td id="custom1" class="stat__cell ">0</td>
+                <td id="custom2" class="stat__cell ">0</td>
+                <td id="custom3" class="stat__cell ">0</td>
 
                 
                 
             </tr>
             <tr>
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("sleight", 1)'>+</button>
                     <button onclick='stat("sleight", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("stealth", 1)'>+</button>
                     <button onclick='stat("stealth", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("technology", 1)'>+</button>
                     <button onclick='stat("technology", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("treatment", 1)'>+</button>
                     <button onclick='stat("treatment", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("vehicles", 1)'>+</button>
                     <button onclick='stat("vehicles", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("custom1", 1)'>+</button>
                     <button onclick='stat("custom1", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("custom2", 1)'>+</button>
                     <button onclick='stat("custom2", -1)'>-</button>
                 </td>
 
-                <td class="skill__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("custom3", 1)'>+</button>
                     <button onclick='stat("custom3", -1)'>-</button>
                 </td>
@@ -256,41 +256,41 @@
         </table>
     </div>
 
-<div class="power">
-        <table class="power__table">
+<div class="stat__div">
+        <table class="stat__table">
             <tr>
-                <td class="power__cell power__cell_style_heavy">Offensive Powers</td>
-                <td class="power__cell power__cell_style_heavy">Defensive Powers</td>
-                <td class="power__cell power__cell_style_heavy">Mobility Powers</td>
-                <td class="power__cell power__cell_style_heavy">Utility Powers</td>
+                <td class="stat__cell  stat__cell_style_power">Offensive Powers</td>
+                <td class="stat__cell  stat__cell_style_power">Defensive Powers</td>
+                <td class="stat__cell  stat__cell_style_power">Mobility Powers</td>
+                <td class="stat__cell  stat__cell_style_power">Utility Powers</td>
                 
                            
             </tr>
             <tr>
-                <td id="offensive" class="power__cell">0</td>
-                <td id="defensive" class="power__cell">0</td>
-                <td id="mobility" class="power__cell">0</td>
-                <td id="utility" class="power__cell">0</td>
+                <td id="offensive" class="stat__cell ">0</td>
+                <td id="defensive" class="stat__cell ">0</td>
+                <td id="mobility" class="stat__cell ">0</td>
+                <td id="utility" class="stat__cell ">0</td>
                 
                 
             </tr>
             <tr>
-                <td class="power__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("offensive", 1)'>+</button>
                     <button onclick='stat("offensive", -1)'>-</button>
                 </td>
 
-                <td class="power__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("defensive", 1)'>+</button>
                     <button onclick='stat("defensive", -1)'>-</button>
                 </td>
 
-                <td class="power__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("mobility", 1)'>+</button>
                     <button onclick='stat("mobility", -1)'>-</button>
                 </td>
 
-                <td class="power__cell">
+                <td class="stat__cell ">
                     <button onclick='stat("utility", 1)'>+</button>
                     <button onclick='stat("utility", -1)'>-</button>
                 </td>
@@ -302,35 +302,35 @@
 
 
 
- <div class="cost">
-        <table class="cost__table">
+ <div class="stat__div">
+        <table class="stat__table">
             <tr>
-                <td class="cost__cell cost__cell_style_heavy">Attributes</td>
-                <td class="cost__cell cost__cell_style_heavy">Combat</td>
-                <td class="cost__cell cost__cell_style_heavy">Skills</td>
-                <td class="cost__cell cost__cell_style_heavy">Powers</td>
-                <td class="cost__cell cost__cell_style_heavy">Total</td>
+                <td class="stat__cell_style_cost-body stat__cell_style_cost">Attributes</td>
+                <td class="stat__cell_style_cost-body stat__cell_style_cost">Combat</td>
+                <td class="stat__cell_style_cost-body stat__cell_style_cost">Skills</td>
+                <td class="stat__cell_style_cost-body stat__cell_style_cost">Powers</td>
+                <td class="stat__cell_style_cost-body stat__cell_style_cost">Total</td>
                            
             </tr>
             <tr>
-                <td id="attribute-cost" class="cost__cell">0</td>
-                <td id="combat-cost" class="cost__cell">0</td>
-                <td id="skill-cost" class="cost__cell">0</td>
-                <td id="power-cost" class="cost__cell">0</td>
-                <td id="total-cost" class="cost__cell">0</td>
+                <td id="attribute-cost" class="stat__cell_style_cost-body">0</td>
+                <td id="combat-cost" class="stat__cell_style_cost-body">0</td>
+                <td id="skill-cost" class="stat__cell_style_cost-body">0</td>
+                <td id="power-cost" class="stat__cell_style_cost-body">0</td>
+                <td id="total-cost" class="stat__cell_style_cost-body">0</td>
             </tr>
             
         </table>
     </div>
 
-    <div class="preset">
-        <table class="preset__table">
+    <div class="stat__div">
+        <table class="stat__table_style_preset">
             <tr>
-                <td class="preset__cell"><button class="preset__button" onclick="showCharacter()">Show Character</button></td>
-                <td class="preset__cell"><button class="preset__button" onclick="quickSetup(6)">Paranormal</button></td>
-                <td class="preset__cell"><button class="preset__button" onclick="quickSetup(10)">Superhuman</button></td>
-                <td class="preset__cell"><button class="preset__button" onclick="quickSetup(14)">Godlike</button></td>
-                <td class="preset__cell"><button class="preset__button" onclick="clearAll()">Clear</button></td>
+                <td class="stat__cell_style_preset"><button class="stat__button" onclick="showCharacter()">Show Character</button></td>
+                <td class="stat__cell_style_preset"><button class="stat__button" onclick="quickSetup(6)">Paranormal</button></td>
+                <td class="stat__cell_style_preset"><button class="stat__button" onclick="quickSetup(10)">Superhuman</button></td>
+                <td class="stat__cell_style_preset"><button class="stat__button" onclick="quickSetup(14)">Godlike</button></td>
+                <td class="stat__cell_style_preset"><button class="stat__button" onclick="clearAll()">Clear</button></td>
                            
             </tr>
             
