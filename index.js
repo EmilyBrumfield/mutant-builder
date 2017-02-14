@@ -6,53 +6,12 @@
 /*Most of these functions are nearly identical, but I'm keeping them separate because there's a good chance they'll become different
 as I add new features*/
 
+/*Update: Refactoring to group identical functions together. I feel like this is a finished application and expanding it would
+add too much bloat. Instead, I might make some sister applications that use exported data from this one or otherwise complement it.
+Due to that decision, I don't really need to separate the functions for future differentiation.*/
+
 //======================ADJUST AN ATTRIBUTE=============
-function attribute(statId, amount) {  
-    /*statId should be the HTML element id for one of the table cells
-      amount should be the amount to increment the trait by*/
- 
- 
-  var statValue = parseInt(document.getElementById(statId).innerHTML, 10); //gets value of the stat from the relevant HTML element, converts to integer
-  statValue += parseInt(amount, 10); //adjusts the stat by the appropriate amount, ensures integers are being used
-  document.getElementById(statId).innerHTML = statValue; //updates the stat rating on the table
-
-  
-  updateCost(); //calls the updateCost function to adjust the point costs
-
-}
-
-//======================ADJUST A SKILL=============
-function skill(statId, amount) {  
-    /*statId should be the HTML element id for one of the table cells
-      amount should be the amount to increment the trait by*/
- 
- 
-  var statValue = parseInt(document.getElementById(statId).innerHTML, 10); //gets value of the stat from the relevant HTML element, converts to integer
-  statValue += parseInt(amount, 10); //adjusts the stat by the appropriate amount, ensures integers are being used
-  document.getElementById(statId).innerHTML = statValue; //updates the stat rating on the table
-
-  
-  updateCost(); //calls the updateCost function to adjust the point costs
-
-}
-
-//======================ADJUST A COMBAT TRAIT=============
-function combat(statId, amount) {  
-    /*statId should be the HTML element id for one of the table cells
-      amount should be the amount to increment the trait by*/
- 
- 
-  var statValue = parseInt(document.getElementById(statId).innerHTML, 10); //gets value of the stat from the relevant HTML element, converts to integer
-  statValue += parseInt(amount, 10); //adjusts the stat by the appropriate amount, ensures integers are being used
-  document.getElementById(statId).innerHTML = statValue; //updates the stat rating on the table
-
-  
-  updateCost(); //calls the updateCost function to adjust the point costs
-
-}
-
-//======================ADJUST A POWER=============
-function power(statId, amount) {  
+function stat(statId, amount) {  
     /*statId should be the HTML element id for one of the table cells
       amount should be the amount to increment the trait by*/
  
