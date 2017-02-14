@@ -29,7 +29,12 @@ function stat(statId, amount) {
 function updateCost() { //tracks costs of ranks
   
   var attributeCost = 3; //constant; character point cost per attribute rank
-  
+  var combatCost = 1; //constant; character point cost per combat rank
+  var skillCost = 0.5; //constant; character point cost per skill rank
+  //Important Note: Attributes provide discounts to combat costs.
+  //For simplicity, we just apply all attributes to the lump cost rather than distinguish which attribute discounts which combat traits
+  //Might provides 3 points of discount, Finesse provides 2 points, and Soul provides 1 point
+
   var attributeRanks = 0; //attributeRanks is the total number of attribute ranks; starts at zero
   attributeRanks += parseInt(document.getElementById("might").innerHTML, 10); //adds Might's ranks to attributeRanks
   attributeRanks += parseInt(document.getElementById("finesse").innerHTML, 10); //see above
@@ -38,12 +43,6 @@ function updateCost() { //tracks costs of ranks
   
   document.getElementById("attribute-cost").innerHTML = attributeCost * attributeRanks; // calculates attribute cost, updates display
 
-
-  var combatCost = 1; //constant; character point cost per combat rank
-  //Important Note: Attributes provide discounts to combat costs.
-  //For simplicity, we just apply all attributes to the lump cost rather than distinguish which attribute discounts which combat traits
-  //Might provides 3 points of discount, Finesse provides 2 points, and Soul provides 1 point
-    
   var combatRanks = 0; //skillRanks is the total number of combat ranks; starts at zero
   combatRanks += parseInt(document.getElementById("attack").innerHTML, 10); //adds Attack's ranks to combatRanks
   combatRanks += parseInt(document.getElementById("defense").innerHTML, 10); //see above
@@ -61,10 +60,7 @@ function updateCost() { //tracks costs of ranks
   combatRanks -= parseInt(document.getElementById("soul").innerHTML, 10); //Discount to Will for Soul
   
   document.getElementById("combat-cost").innerHTML = combatCost * combatRanks; // calculates combat cost, updates display; can be a fraction
-  
-
-  var skillCost = 0.5; //constant; character point cost per skill rank
-  
+ 
   var skillRanks = 0; //skillRanks is the total number of skill ranks; starts at zero
   skillRanks += parseInt(document.getElementById("acrobatics").innerHTML, 10); //adds Acrobatics's ranks to skillRanks
   skillRanks += parseInt(document.getElementById("athletics").innerHTML, 10); //see above
